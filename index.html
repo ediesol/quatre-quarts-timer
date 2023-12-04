@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quatre quarts Timer</title>
+    <link rel="stylesheet" href="timer.css" />
+    <script defer src="timer.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>quatre quarts</h1>
+    </header>
+    <main>
+        <form>
+            <label for="hours">hours</label>
+            <input class="timeField" id="hours" name="hours" />
+            <label for="minutes">minutes</label>
+            <input class="timeField" id="minutes" name="minutes" />
+            <label for="seconds">seconds</label>
+            <input class="timeField" id="seconds" name="seconds" />
+        </form>
+        <form>
+            <input type="checkbox" id="interval" name="interval" value="active" />
+            <label for="interval"> Interval bell</label>
+            <input type="checkbox" id="silent" name="silent" value="active" />
+            <label for="silent">Silent mode</label>
+            <button id="start">Start</button>
+        </form>
+    </main>
+
+    <figure>
+        <figcaption></figcaption>
+        <div class="gridContainer">
+            <progress id="b1" value="100" max="100"></progress>
+            <progress id="b2" value="100" max="100"></progress>
+            <progress id="b3" value="100" max="100"></progress>
+            <progress id="b4" value="100" max="100" id=""></progress>
+        </div>
+    </figure>
+
+    <div id="endMessage">time's up!</div>
+
+    <footer>
+        <nav>about</nav>
+        <p>Quatre quarts is a timer for time blindness, emphasizing how much is left from the whole duration, rather than its abstract time value. <br /> Created by Eddie de Goër.
+
+        </p>
+    </footer>
+
+</body>
+
+</html>
