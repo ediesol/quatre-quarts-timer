@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'AsapM';
+    src: local("Asap Medium"), url("fonts/Asap-Medium.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'AsapB';
+    src: local("Asap Black"), url("fonts/Asap-Black.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'AsapTI';
+    src: local("Asap Thin Italic"), url("fonts/Asap-ThinItalic.ttf") format('truetype');
+}
+
+body {
+    font-family: AsapM;
+    font-size: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    border: solid 0.7vw lightgreen;
+    margin-top: 10vw;
+    border-radius: 2vw;
+    background-color: white;
+    padding: 2vw 4vw;
+    color: lightgreen;
+    position: relative;
+    z-index: 20;
+}
+
+main {
+    display: inline-block;
+    border: solid 2.5vw rgb(243, 243, 243);
+    border-radius: 2vw;
+    padding: 10vw 4vw 5vw;
+    position: relative;
+    top: -10vw;
+    background-color: white;
+}
+
+form:first-of-type {
+    font-size: 1.2em;
+    margin-bottom: 1.8vw;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.timeField {
+    width: 7vw;
+}
+
+input[type="checkbox"] {
+    accent-color: lightgreen;
+}
+
+figure {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: -11.5vw;
+}
+
+progress {
+    height: auto;
+    width: auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    --color: lightgreen;
+    --background: white;
+    border: none;
+    background: var(--background);
+}
+
+progress::-webkit-progress-bar {
+    background-color: white;
+}
+
+progress::-webkit-progress-value {
+    background-color: lightgreen;
+}
+
+progress::-moz-progress-bar {
+    background: var(--color);
+}
+
+.gridContainer {
+    display: grid;
+    grid: 45vw 45vw / 45vw 45vw;
+    gap: 1vw;
+}
+
+figcaption {
+    z-index: 20;
+    background-color: white;
+    padding: 3vw;
+    border-radius: 1vw;
+    position: relative;
+    top: 50.8vw;
+    font-size: 1.3em;
+}
+
+#b1 {
+    order: 1;
+}
+
+#b2 {
+    order: 3;
+}
+
+#b3 {
+    order: 4;
+}
+
+#b4 {
+    order: 2;
+
+}
+
+div {
+    display: none;
+}
+
+#endMessage {
+    font-size: 2em;
+    position: relative;
+    top: 15vw;
+    background-color: lightgreen;
+    color: white;
+    padding: 16vw;
+    border-radius: 3vw;
+}
+
+button {
+    font-family: AsapM;
+    font-size: 0.9em;
+    background-color: lightgreen;
+    border-radius: 3px;
+    border: solid black 1px;
+    padding-inline: 3vw;
+}
+
+input {
+    font-family: AsapM;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+button:disabled {
+    background-color: rgb(243, 243, 243);
+    ;
+    border: rgb(61, 61, 61);
+}
+
+footer {
+    font-size: 0.8em;
+    position: absolute;
+    right: 5vw;
+    bottom: 6vw;
+    text-align: right;
+    width: 40vw;
+}
+
+nav {
+    position: fixed;
+    right: 5vw;
+    bottom: 5vw;
+    color: black;
+}
+
+nav:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    display: none;
+}
+
+@media (min-aspect-ratio: 10/13) {
+
+    body {
+        font-size: clamp(1px, 3vw, 3vh);
+    }
+
+    .gridContainer {
+        grid: 35vh 35vh / 35vh 35vh;
+    }
+
+    h1 {
+        margin-top: clamp(1px, 10vw, 6vh);
+    }
+
+    figcaption {
+        top: 39.5vh;
+    }
+
+    #endMessage {
+        padding: clamp(1px, 16vw, 16vh);
+        top: clamp(1px, 15vw, 10vh);
+    }
+
+
+}
+
+@media (min-aspect-ratio: 10/11) {
+
+    .gridContainer {
+        grid: 35vh 35vh / 35vh 35vh;
+        position: relative;
+        top: -11.5vh;
+    }
+
+    figcaption {
+        top: 29vh;
+    }
+}
