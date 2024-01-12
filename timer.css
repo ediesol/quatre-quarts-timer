@@ -15,36 +15,31 @@
 
 body {
     font-family: AsapM;
-    font-size: 3vw;
     display: flex;
+    font-size: clamp(2vh, 3vw, 3vh);
     flex-direction: column;
     align-items: center;
 }
 
 h1 {
-    border: solid 0.7vw lightgreen;
+    border: solid 0.7vw var(--varcolor);
     margin-top: 10vw;
     border-radius: 2vw;
     background-color: white;
     padding: 2vw 4vw;
-    color: lightgreen;
+    color: var(--varcolor);
     position: relative;
     z-index: 20;
 }
 
 main {
     display: inline-block;
-    border: solid 2.5vw rgb(243, 243, 243);
     border-radius: 2vw;
     padding: 10vw 4vw 5vw;
     position: relative;
     top: -10vw;
-    background-color: white;
-}
-
-form:first-of-type {
-    font-size: 1.2em;
-    margin-bottom: 1.8vw;
+    background-color: rgb(255, 255, 255, 0.93);
+    width: clamp(40vw, 21em, 85vw);
 }
 
 form {
@@ -53,12 +48,18 @@ form {
     gap: 1vw;
 }
 
+form:first-of-type {
+    font-size: 1.2em;
+    margin-bottom: 1.8vw;
+    justify-content: space-between;
+}
+
 .timeField {
-    width: 7vw;
+    width: 10%;
 }
 
 input[type="checkbox"] {
-    accent-color: lightgreen;
+    accent-color: var(--varcolor);
 }
 
 figure {
@@ -75,10 +76,11 @@ progress {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    --color: lightgreen;
+    --color: var(--varcolor);
     --background: white;
     border: none;
     background: var(--background);
+    transition: all .5s linear;
 }
 
 progress::-webkit-progress-bar {
@@ -86,7 +88,7 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    background-color: lightgreen;
+    background-color: var(--varcolor);
 }
 
 progress::-moz-progress-bar {
@@ -102,11 +104,14 @@ progress::-moz-progress-bar {
 figcaption {
     z-index: 20;
     background-color: white;
+    color: var(--varcolor);
     padding: 3vw;
     border-radius: 1vw;
     position: relative;
     top: 50.8vw;
     font-size: 1.3em;
+    outline: solid 0.5vw var(--varcolor);
+
 }
 
 #b1 {
@@ -126,15 +131,9 @@ figcaption {
 
 }
 
-div {
-    display: none;
-}
-
-#endMessage {
+.end-message {
     font-size: 2em;
-    position: relative;
-    top: 15vw;
-    background-color: lightgreen;
+    background-color: var(--varcolor);
     color: white;
     padding: 16vw;
     border-radius: 3vw;
@@ -143,31 +142,70 @@ div {
 button {
     font-family: AsapM;
     font-size: 0.9em;
-    background-color: lightgreen;
+    background-color: var(--varcolor);
     border-radius: 3px;
-    border: solid black 1px;
+    border: solid rgb(102, 215, 102) 0.1em;
     padding-inline: 3vw;
+}
+
+main button:hover {
+    background-color: rgb(144, 238, 144, 0.8);
+}
+
+button:disabled {
+    background-color: rgb(166, 241, 166);
+    border-color: rgb(144, 238, 144, 0.6);
+}
+
+a {
+    color: darkgray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightgreen;
+}
+
+figure button {
+    position: relative;
+    top: -35vw;
+    border: none;
+    background-color: white;
+    color: var(--varcolor);
+    width: 15vw;
+    height: 8vw;
+    font-size: 1.3em;
+    outline: solid 0.5vw;
+    border-radius: 0.5vw;
+}
+
+.paused {
+    color: white;
+    background-color: var(--varcolor);
+    outline: solid 0.5vw;
+
 }
 
 input {
     font-family: AsapM;
     font-size: 0.9em;
     text-align: center;
+    border: solid 0.1em var(--varcolor);
+    border-radius: 0.2em;
 }
 
-button:disabled {
-    background-color: rgb(243, 243, 243);
-    ;
-    border: rgb(61, 61, 61);
+input:focus {
+    background-color: rgb(144, 238, 144, 0.4);
+    outline: none;
 }
 
 footer {
-    font-size: 0.8em;
+    font-size: 2vh;
     position: absolute;
     right: 5vw;
     bottom: 6vw;
     text-align: right;
-    width: 40vw;
+    width: clamp(20em, 40vw, 90vw);
 }
 
 nav {
@@ -175,6 +213,18 @@ nav {
     right: 5vw;
     bottom: 5vw;
     color: black;
+    z-index: 10;
+}
+
+.footer-opened {
+    display: inline-block;
+    background-color: rgb(255, 255, 255, 0.93);
+    padding: 2vw 2vw 4vw 2vw;
+    border-radius: 1vw;
+}
+
+.nav-opened {
+    color: lightgreen;
 }
 
 nav:hover {
@@ -183,13 +233,45 @@ nav:hover {
 
 footer p {
     display: none;
+    position: relative;
+    top: 4vw;
+    right: -2vw;
+}
+
+.warning {
+    position: relative;
+    top: 3vw;
+    font-size: clamp(1.8vh, 2.4vw, 2.4vh);
+    ;
+    background-color: var(--varcolor);
+    color: white;
+    width: 25em;
+    border-radius: 0.5em;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.warning p {
+    margin: 0;
+}
+
+.warning button {
+    float: right;
+    border: none;
+    width: fit-content;
+    padding: 0;
+    position: relative;
+    top: -1vw;
+    font-size: 1.3em;
+    color: white;
+}
+
+.warning button:hover {
+    color: black;
 }
 
 @media (min-aspect-ratio: 10/13) {
-
-    body {
-        font-size: clamp(1px, 3vw, 3vh);
-    }
 
     .gridContainer {
         grid: 35vh 35vh / 35vh 35vh;
@@ -203,11 +285,13 @@ footer p {
         top: 39.5vh;
     }
 
-    #endMessage {
-        padding: clamp(1px, 16vw, 16vh);
-        top: clamp(1px, 15vw, 10vh);
+    .end-message {
+        top: clamp(1px, 25vw, 30vh);
     }
 
+    figure button {
+        top: -27vh;
+    }
 
 }
 
@@ -222,4 +306,14 @@ footer p {
     figcaption {
         top: 29vh;
     }
+
+    .end-message {
+        padding: clamp(1px, 16vw, 16vh);
+        top: clamp(1px, 25vw, 20vh);
+    }
+
+    figure button {
+        top: -38vh;
+    }
+
 }

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Quatre quarts Timer</title>
     <link rel="stylesheet" href="timer.css" />
+    <link rel="icon" type="image/x-icon" href="/media/favicon.png">
     <script defer src="timer.js"></script>
 </head>
 
@@ -16,12 +17,14 @@
     </header>
     <main>
         <form>
+
+            <input class="timeField" id="hours" name="hours" type="number" />
             <label for="hours">hours</label>
-            <input class="timeField" id="hours" name="hours" />
+            <input class="timeField" id="minutes" name="minutes" type="number" />
             <label for="minutes">minutes</label>
-            <input class="timeField" id="minutes" name="minutes" />
+            <input class="timeField" id="seconds" name="seconds" type="number" />
             <label for="seconds">seconds</label>
-            <input class="timeField" id="seconds" name="seconds" />
+
         </form>
         <form>
             <input type="checkbox" id="interval" name="interval" value="active" />
@@ -30,7 +33,17 @@
             <label for="silent">Silent mode</label>
             <button id="start">Start</button>
         </form>
+
+        <div class="warning">
+            <button>⨯</button>
+            <p>Please note: bells may not (yet) ring reliably when running Quatre quarts in a background tab. If you want to use it in the background, it's best you open it in a separate window, otherwise your browser might stop it from running after a while.</p>
+
+        </div>
+
+
     </main>
+
+
 
     <figure>
         <figcaption></figcaption>
@@ -40,13 +53,13 @@
             <progress id="b3" value="100" max="100"></progress>
             <progress id="b4" value="100" max="100" id=""></progress>
         </div>
+        <button>II</button>
     </figure>
-
-    <div id="endMessage">time's up!</div>
 
     <footer>
         <nav>about</nav>
-        <p>Quatre quarts is a timer for time blindness, emphasizing how much is left from the whole duration, rather than its abstract time value. <br /> Created by Eddie de Goër.
+        <p>Quatre quarts is a timer for time blindness.
+            <br />Its aim is to emphasize how much is left from the whole duration, rather than its abstract time value. <br /> Created by Eddie de Goër. <a href="https://github.com/ediesol/quatre-quarts-timer" target="_blank">→ Github</a>
 
         </p>
     </footer>
