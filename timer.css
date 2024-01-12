@@ -172,8 +172,8 @@ figure button {
     border: none;
     background-color: white;
     color: var(--varcolor);
-    width: 15vw;
-    height: 8vw;
+    width: 20%;
+    height: 2.3em;
     font-size: 1.3em;
     outline: solid 0.5vw;
     border-radius: 0.5vw;
