@@ -1,3 +1,5 @@
+import "./node_modules/hacktimer/HackTimer.js";
+
 "use strict";
 
 let random;
