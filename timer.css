@@ -164,6 +164,7 @@ a {
 
 a:hover {
     color: lightgreen;
+    text-decoration: underline;
 }
 
 figure button {
@@ -216,10 +217,17 @@ nav {
     z-index: 10;
 }
 
+.infos {
+    display: none;
+    position: relative;
+    top: 3vw;
+    right: -2vw;
+}
+
 .footer-opened {
     display: inline-block;
     background-color: rgb(255, 255, 255, 0.93);
-    padding: 2vw 2vw 4vw 2vw;
+    padding: 0vw 2vw 2.8em 2vw;
     border-radius: 1vw;
 }
 
@@ -231,12 +239,12 @@ nav:hover {
     text-decoration: underline;
 }
 
-footer p {
-    display: none;
-    position: relative;
-    top: 4vw;
-    right: -2vw;
+.credits {
+    font-size: 0.9em;
+    margin-block: 0.2em;
 }
+
+
 
 .warning {
     position: relative;
