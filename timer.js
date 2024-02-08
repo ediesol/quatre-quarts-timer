@@ -1,5 +1,3 @@
-import "./node_modules/hacktimer/HackTimer.js";
-
 "use strict";
 
 let random;
@@ -37,6 +35,13 @@ const pauseButton = document.querySelector("figure button");
 //global scope color setting
 let root = document.querySelector(":root");
 root.style.setProperty('--varcolor', 'lightgreen');
+
+(function hideWarning() {
+    const warning = document.querySelector(".warning");
+    warning.addEventListener("click", function hide() {
+        warning.style.display = "none";
+    })
+})();
 
 
 //INPUT ACTIONS
@@ -88,7 +93,7 @@ root.style.setProperty('--varcolor', 'lightgreen');
 })();
 
 (function detailsHandler() {
-    const timerInfo = footer.querySelector(".infos");
+    const timerInfo = footer.querySelector("p");
     const navButton = footer.querySelector("nav");
     let isOpen = false;
 
@@ -100,7 +105,7 @@ root.style.setProperty('--varcolor', 'lightgreen');
             navButton.classList.add('nav-opened');
 
         } else if (isOpen == true) {
-            navButton.innerHTML = "about";
+            navButton.innerHTML = "details";
             isOpen = false;
             timerInfo.classList.remove('footer-opened');
             navButton.classList.remove('nav-opened');
