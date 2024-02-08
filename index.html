@@ -8,7 +8,7 @@
     <title>Quatre quarts Timer</title>
     <link rel="stylesheet" href="timer.css" />
     <link rel="icon" type="image/x-icon" href="/media/favicon.png">
-    <script defer src="timer.js"></script>
+    <script type="module" src="timer.js"></script>
 </head>
 
 <body>
@@ -34,13 +34,6 @@
             <button id="start">Start</button>
         </form>
 
-        <div class="warning">
-            <button>⨯</button>
-            <p>Please note: bells may not (yet) ring reliably when running Quatre quarts in a background tab. If you want to use it in the background, it's best you open it in a separate window, otherwise your browser might stop it from running after a while.</p>
-
-        </div>
-
-
     </main>
 
 
@@ -58,10 +51,11 @@
 
     <footer>
         <nav>about</nav>
-        <p>Quatre quarts is a timer for time blindness.
-            <br />Its aim is to emphasize how much is left from the whole duration, rather than its abstract time value. <br /> Created by Eddie de Goër. <a href="https://github.com/ediesol/quatre-quarts-timer" target="_blank">→ Github</a>
-
-        </p>
+        <div class="infos">
+            <p>Quatre quart is a timer that emphasizes which share of a given time is left, rather than only focusing on time duration. </p>
+            <p class="credits">Created by Eddie de Goër. <a href="https://github.com/ediesol/quatre-quarts-timer" target="_blank">Github →</a> </p>
+            <p class="credits">If you like Quatre quarts and want to help me improve it or develop other helpful tools, you can <a href="https://ko-fi.com/eddegoer" target="_blank">support me on ko-fi.</a></p>
+        </div>
     </footer>
 
 </body>
