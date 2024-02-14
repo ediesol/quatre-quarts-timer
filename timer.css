@@ -244,6 +244,10 @@ nav:hover {
     margin-block: 0.2em;
 }
 
+.grey {
+    color: darkgrey;
+}
+
 .warning {
     position: relative;
     top: 3vw;
