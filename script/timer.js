@@ -87,21 +87,32 @@ root.style.setProperty('--varcolor', 'lightgreen');
 })();
 
 (function detailsHandler() {
-    const timerInfo = footer.querySelector(".infos");
-    const navButton = footer.querySelector("nav");
+    const timerInfo = document.querySelector(".infos");
+    const navButton = document.querySelector("#about");
     let isOpen = false;
+    const privButton = document.querySelector("#privacy");
+    const privPol = document.querySelector("#privpolicy");
 
     document.addEventListener("click", function handleDetails(e) {
+
         if (e.target == navButton && isOpen == false) {
             navButton.innerHTML = "close";
             isOpen = true;
-            timerInfo.classList.add('footer-opened');
+            timerInfo.classList.remove('sr-only');
+            privButton.classList.remove('sr-only');
             navButton.classList.add('nav-opened');
 
-        } else if (isOpen == true) {
+        } else if (e.target == privButton) {
+            privPol.classList.remove('sr-only');
+            privButton.classList.add('sr-only');
+            timerInfo.classList.add('sr-only');
+
+        } else if (isOpen) {
             navButton.innerHTML = "about";
             isOpen = false;
-            timerInfo.classList.remove('footer-opened');
+            timerInfo.classList.add('sr-only');
+            privPol.classList.add('sr-only');
+            privButton.classList.add('sr-only');
             navButton.classList.remove('nav-opened');
         }
     })

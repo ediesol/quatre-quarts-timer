@@ -204,7 +204,6 @@ footer {
     position: absolute;
     right: 5vw;
     bottom: 6vw;
-    text-align: right;
     width: clamp(20em, 40vw, 90vw);
     max-width: 94vw;
 }
@@ -218,34 +217,56 @@ nav {
 }
 
 .infos {
-    display: none;
     position: relative;
     top: 3vw;
     right: -2vw;
+    background-color: rgb(255, 255, 255, 0.93);
+    padding: 1em 2vw 2.8em 2vw;
+    border-radius: 1vw;
 }
 
-.footer-opened {
-    display: inline-block;
-    background-color: rgb(255, 255, 255, 0.93);
-    padding: 0vw 2vw 2.8em 2vw;
-    border-radius: 1vw;
+p {
+    margin-block: 0 1em;
 }
 
 .nav-opened {
     color: lightgreen;
 }
 
-nav:hover {
+ul {
+    margin: 0;
+}
+
+ul:hover {
     text-decoration: underline;
 }
 
-.credits {
+.footerSmall {
     font-size: 0.9em;
-    margin-block: 0.2em;
+}
+
+.smallbreak {
+    margin-bottom: 0.2em;
+}
+
+br {
+    margin: 0.5em;
 }
 
 .grey {
     color: darkgrey;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.green {
+    color: lightgreen;
+}
+
+.info-smaller {
+    font-size: 0.7em;
 }
 
 .warning {
@@ -279,6 +300,22 @@ nav:hover {
 
 .warning button:hover {
     color: black;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 @media (min-aspect-ratio: 10/13) {

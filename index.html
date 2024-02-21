@@ -48,17 +48,36 @@
     </figure>
 
     <footer>
-        <nav>about</nav>
-        <div class="infos">
-            <p>Quatre quart is a timer emphasizing which share of a given timespan is left, rather than only focusing on time duration.
-                <p class="credits grey">Some less common mobile browsers stop the timer from ringing. If you encounter this, try adding an exception enabling audio and/or video autoplay for this site.</p>
+        <nav>
+            <li>
+                <ul id="privacy" class="sr-only">privacy</ul>
+                <ul id="about">about</ul>
+            </li>
+        </nav>
+        <div class="infos sr-only">
+            <p>quatre quarts is a timer emphasizing which share of a given timespan is left, rather than only focusing on time duration.
             </p>
-
-            <p class="credits">Created by Eddie de Goër. <a href="https://github.com/ediesol/quatre-quarts-timer" target="_blank">Github →</a> </p>
-            <p class="credits">If you like Quatre quarts and want to help me improve it or develop similar tools, you can <a href="https://ko-fi.com/eddegoer" target="_blank">support me on ko-fi.</a></p>
-
+            <p class="footerSmall grey">Some less common mobile browsers stop the timer from ringing. If you encounter this, try adding an exception enabling audio and/or video autoplay for this site.</p>
+            <p class="footerSmall smallbreak">Created by Eddie de Goër. <a href="https://github.com/ediesol/quatre-quarts-timer" target="_blank">Github →</a></p>
+            <p class="footerSmall">If you like quatre quarts and want to help me improve it or develop similar tools, you can <a href="https://ko-fi.com/eddegoer" target="_blank">support me on ko-fi.</a></p>
         </div>
+        <div class="infos footerSmall sr-only" id="privpolicy">
+            <p><span class="green">tl;dr:</span></p>
+            <p>
+                quatre quarts uses <a href="https://withcabin.com/privacy/ediesol.github.io" target="_blank">Cabin Analytics,</a> a privacy focused analytics service that does not collect any personal data. Its only purpose is to provide general information on how and how much quatre quarts is used.</p>
+
+            <p><a class="green">how it works:</a>
+                <p> Cabin collects anymous general usage data, for example: how many people visit the page, for how long, which device and browser they use, which country they connect from. These data points are stored separately from each other, meaning there is no joint data about a specific user, only general statistics.</p>
+                <p>Cabin does not collect any IP address, nor create unique user identifyers, nor use cookies.</p>
+                <p>How I use the collected data: my aim is to have some basic information on usage while collecting as little data as possible. So far this is primarily out of curiosity, and possibly to improve quatre quarts as well.</p>
+                <p>Collected data is stored for 30 days.</p>
+                <p>For more information or an example of the data collected you can visit Cabin's <a href="https://withcabin.com" target="_blank">website</a> or <a href="https://docs.withcabin.com" target="_blank">documentation.</a></p>
+            </p>
+        </div>
+
     </footer>
+
+
 
     <script async defer src="https://scripts.withcabin.com/hello.js"></script>
 
