@@ -204,7 +204,6 @@ footer {
     position: absolute;
     right: 5vw;
     bottom: 6vw;
-    width: clamp(20em, 40vw, 90vw);
     max-width: 94vw;
 }
 
@@ -220,8 +219,8 @@ nav {
     position: relative;
     top: 3vw;
     right: -2vw;
-    background-color: rgb(255, 255, 255, 0.93);
-    padding: 1em 2vw 2.8em 2vw;
+    background-color: rgb(255, 255, 255);
+    padding: 1em 1em 2.8em 1em;
     border-radius: 1vw;
 }
 
@@ -340,6 +339,10 @@ li {
         top: -27vh;
     }
 
+    footer {
+        width: 70vw;
+    }
+
 }
 
 @media (min-aspect-ratio: 10/11) {
@@ -361,6 +364,10 @@ li {
 
     figure button {
         top: -38vh;
+    }
+
+    footer {
+        width: max(50vh, 40vw);
     }
 
 }
