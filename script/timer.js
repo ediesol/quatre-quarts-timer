@@ -107,7 +107,7 @@ root.style.setProperty('--varcolor', 'lightgreen');
             privButton.classList.add('sr-only');
             timerInfo.classList.add('sr-only');
 
-        } else if (isOpen) {
+        } else if (isOpen && !e.target.matches("a")) {
             navButton.innerHTML = "about";
             isOpen = false;
             timerInfo.classList.add('sr-only');
